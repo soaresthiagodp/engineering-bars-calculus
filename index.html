@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Formulae</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Load MathJax -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Engineering Formulae</h1>
+        <div class="selector">
+            <label for="formula-select">Select Formulae:</label>
+            <select id="formula-select">
+                <option value="radius">Radius Formulae</option>
+                <option value="velocity">Velocity Formulae</option>
+            </select>
+        </div>
+
+        <div id="radius-formulae" class="formulae-section">
+            <h2>Radius Formulae</h2>
+            <div class="formula">
+                <p><strong>Formula:</strong></p>
+                <p id="radius-formula" class="formula-text">
+                    \( R_1 = R_2 \cdot \cos(\text{angle}) + \sqrt{R_3^2 - R_2^2 \cdot \sin(\text{angle})^2} \)
+                </p>
+            </div>
+            <label for="R2">R2:</label>
+            <input type="number" id="R2" step="any">
+            <label for="R3">R3:</label>
+            <input type="number" id="R3" step="any">
+            <label for="angle">Angle:</label>
+            <input type="number" id="angle" step="any">
+            <label for="angle-units">Angle Units:</label>
+            <select id="angle-units">
+                <option value="degrees">Degrees</option>
+                <option value="radians">Radians</option>
+            </select>
+            <button onclick="calculateRadius()">Calculate R1</button>
+            <p id="radius-result"></p>
+        </div>
+
+        <div id="velocity-formulae" class="formulae-section">
+        <h2>Velocity Formulae</h2>
+            <div class="formula">
+                <p><strong>Formula:</strong></p>
+                <p id="velocity-formula" class="formula-text">
+                    \( V_1 = - W_2 \cdot R_2 \cdot \left[\sin(\text{angle}) + \frac{R_2 \cdot \sin(\text{angle}) \cdot \cos(\text{angle})}{\sqrt{R_3^2 - R_2^2 \cdot \sin(\text{angle})^2}}\right] \)
+                </p>
+            </div>
+            <label for="W2">W2:</label>
+            <input type="number" id="W2" step="any">
+            <label for="R2-velocity">R2:</label>
+            <input type="number" id="R2-velocity" step="any">
+            <label for="R3-velocity">R3:</label>
+            <input type="number" id="R3-velocity" step="any">
+            <label for="angle-velocity">Angle:</label>
+            <input type="number" id="angle-velocity" step="any">
+            <label for="angle-units-velocity">Angle Units:</label>
+            <select id="angle-units-velocity">
+                <option value="degrees">Degrees</option>
+                <option value="radians">Radians</option>
+            </select>
+            <button onclick="calculateVelocity()">Calculate V1</button>
+            <p id="velocity-result"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
