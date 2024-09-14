@@ -55,6 +55,7 @@ h2 {
 /* Form styling */
 .selector {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 label {
@@ -98,4 +99,46 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
     color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    input, select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .formula-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    input, select {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .formula-text {
+        font-size: 14px;
+    }
 }
