@@ -43,6 +43,7 @@ h2 {
     border-radius: 5px;
     border: 1px solid #ddd;
     margin-bottom: 20px;
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
 }
 
 .formula-text {
@@ -50,8 +51,8 @@ h2 {
     color: #555;
     line-height: 1.4;
     text-align: center;
-    overflow-x: auto; /* Adiciona rolagem horizontal */
     white-space: nowrap; /* Garante que a fórmula não quebre linha */
+    display: inline-block; /* Garante que a fórmula se comporte como um bloco dentro da área de rolagem */
 }
 
 /* Form styling */
