@@ -43,16 +43,21 @@ h2 {
     border-radius: 5px;
     border: 1px solid #ddd;
     margin-bottom: 20px;
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    position: relative; /* Needed for absolute positioning of formula */
+    overflow: hidden;   /* Hide any overflow from scaling */
 }
 
 .formula-text {
-    font-size: 18px;
+    font-size: 1.5em; /* Base font size */
     color: #555;
     line-height: 1.4;
     text-align: center;
-    white-space: nowrap; /* Garante que a fórmula não quebre linha */
-    display: inline-block; /* Garante que a fórmula se comporte como um bloco dentro da área de rolagem */
+    transform: scale(0.9); /* Scale down slightly */
+    transform-origin: top left; /* Ensure scaling happens from top-left */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9); /* Center and scale formula */
 }
 
 /* Form styling */
@@ -121,7 +126,7 @@ button:hover {
     }
 
     .formula-text {
-        font-size: 16px;
+        font-size: 1.2em; /* Slightly smaller font size */
     }
 }
 
@@ -142,6 +147,6 @@ button:hover {
     }
 
     .formula-text {
-        font-size: 14px;
+        font-size: 1em; /* Base font size */
     }
 }
