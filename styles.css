@@ -50,6 +50,8 @@ h2 {
     color: #555;
     line-height: 1.4;
     text-align: center;
+    overflow-x: auto; /* Adiciona rolagem horizontal */
+    white-space: nowrap; /* Garante que a fórmula não quebre linha */
 }
 
 /* Form styling */
