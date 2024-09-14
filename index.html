@@ -10,9 +10,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>Formulario Engenharia Adilson</h1>
+        <h1>Cálculos de Engenharia Adilson</h1>
         <div class="selector">
-            <label for="formula-select">Selecione Formula:</label>
+            <label for="formula-select">Selecione Fórmula:</label>
             <select id="formula-select">
                 <option value="radius">Raio</option>
                 <option value="velocity">Velocidade</option>
@@ -20,11 +20,10 @@
         </div>
 
         <div id="radius-formulae" class="formulae-section">
-            <h2>Raio</h2>
+            <h2>Fórmula</h2>
             <div class="formula">
-                <p><strong>Formula:</strong></p>
                 <p id="radius-formula" class="formula-text">
-                    \( R_1 = R_2 \cdot \cos(\text{angle}) + \sqrt{R_3^2 - R_2^2 \cdot \sin(\text{angle})^2} \)
+                    \( R_1 = R_2 \cdot \cos(\theta) + \sqrt{R_3^2 - R_2^2 \cdot \sin(\theta)^2} \)
                 </p>
             </div>
             <div class="form-group">
@@ -36,11 +35,11 @@
                 <input type="number" id="R3" step="any">
             </div>
             <div class="form-group">
-                <label for="angle">Angulo:</label>
+                <label for="angle">Ângulo:</label>
                 <input type="number" id="angle" step="any">
             </div>
             <div class="form-group">
-                <label for="angle-units">Unidade Angulo:</label>
+                <label for="angle-units">Unidade Ângulo:</label>
                 <select id="angle-units">
                     <option value="degrees">Graus</option>
                     <option value="radians">Radianos</option>
@@ -51,11 +50,10 @@
         </div>
 
         <div id="velocity-formulae" class="formulae-section">
-            <h2>Velocidade</h2>
+            <h2>Formula</h2>
             <div class="formula">
-                <p><strong>Formula:</strong></p>
                 <p id="velocity-formula" class="formula-text">
-                    \( V_1 = - W_2 \cdot R_2 \cdot \left[\sin(\text{angle}) + \frac{R_2 \cdot \sin(\text{angle}) \cdot \cos(\text{angle})}{\sqrt{R_3^2 - R_2^2 \cdot \sin(\text{angle})^2}}\right] \)
+                    \( V_1 = - W_2 \cdot R_2 \cdot \left[\sin(\theta) + \frac{R_2 \cdot \sin(\theta) \cdot \cos(\theta)}{\sqrt{R_3^2 - R_2^2 \cdot \sin(\theta)^2}}\right] \)
                 </p>
             </div>
             <div class="form-group">
@@ -71,11 +69,11 @@
                 <input type="number" id="R3-velocity" step="any">
             </div>
             <div class="form-group">
-                <label for="angle-velocity">Angulo:</label>
+                <label for="angle-velocity">Ângulo:</label>
                 <input type="number" id="angle-velocity" step="any">
             </div>
             <div class="form-group">
-                <label for="angle-units-velocity">Unidade Angulo:</label>
+                <label for="angle-units-velocity">Unidade Ângulo:</label>
                 <select id="angle-units-velocity">
                     <option value="degrees">Graus</option>
                     <option value="radians">Radianos</option>
