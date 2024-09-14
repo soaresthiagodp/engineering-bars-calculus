@@ -18,7 +18,7 @@ body {
     width: 90%;
     max-width: 800px;
     margin: auto;
-    padding: 20px;
+    padding: 2vw 4vw;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -36,28 +36,23 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Formula styling */
 .formula {
     background-color: #f8f9fa;
-    padding: 50px;
+    padding: 20px;
     border-radius: 5px;
     border: 1px solid #ddd;
     margin-bottom: 20px;
-    position: relative; /* Needed for absolute positioning of formula */
-    overflow: hidden;   /* Hide any overflow from scaling */
+    position: relative;
+    overflow: hidden; /* Ensure no overflow */
+    text-align: center; /* Center the content */
 }
 
 .formula-text {
-    font-size: 1.5em; /* Base font size */
+    font-size: clamp(0.8rem, 4vw, 2rem); /* Responsive font size: min, preferred, max */
     color: #555;
     line-height: 1.4;
     text-align: center;
-    transform: scale(0.9); /* Scale down slightly */
-    transform-origin: top left; /* Ensure scaling happens from top-left */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9); /* Center and scale formula */
+    width: 100%; /* Ensure it adapts to container width */
 }
 
 /* Form styling */
@@ -103,50 +98,8 @@ button:hover {
 }
 
 /* Results styling */
-#radius-result, #velocity-result {
+#radius-result, #velocity-result, #acceleration-result {
     font-size: 18px;
     font-weight: bold;
     color: #333;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-
-    input, select {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
-
-    .formula-text {
-        font-size: 1.2em; /* Slightly smaller font size */
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
-
-    input, select {
-        font-size: 12px;
-        padding: 6px;
-    }
-
-    button {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-
-    .formula-text {
-        font-size: 1em; /* Base font size */
-    }
 }
