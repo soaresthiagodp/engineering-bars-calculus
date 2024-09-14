@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering Formulae</title>
+    <title>Formulario Engenharia Adilson</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Load MathJax -->
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Engineering Formulae</h1>
+        <h1>Formulario Engenharia Adilson</h1>
         <div class="selector">
-            <label for="formula-select">Select Formulae:</label>
+            <label for="formula-select">Selecione Formula:</label>
             <select id="formula-select">
-                <option value="radius">Radius Formulae</option>
-                <option value="velocity">Velocity Formulae</option>
+                <option value="radius">Raio</option>
+                <option value="velocity">Velocidade</option>
             </select>
         </div>
 
         <div id="radius-formulae" class="formulae-section">
-            <h2>Radius Formulae</h2>
+            <h2>Raio</h2>
             <div class="formula">
                 <p><strong>Formula:</strong></p>
                 <p id="radius-formula" class="formula-text">
@@ -36,22 +36,22 @@
                 <input type="number" id="R3" step="any">
             </div>
             <div class="form-group">
-                <label for="angle">Angle:</label>
+                <label for="angle">Angulo:</label>
                 <input type="number" id="angle" step="any">
             </div>
             <div class="form-group">
-                <label for="angle-units">Angle Units:</label>
+                <label for="angle-units">Unidade Angulo:</label>
                 <select id="angle-units">
-                    <option value="degrees">Degrees</option>
-                    <option value="radians">Radians</option>
+                    <option value="degrees">Graus</option>
+                    <option value="radians">Radianos</option>
                 </select>
             </div>
-            <button onclick="calculateRadius()">Calculate R1</button>
+            <button onclick="calculateRadius()">Calcular R1</button>
             <p id="radius-result"></p>
         </div>
 
         <div id="velocity-formulae" class="formulae-section">
-            <h2>Velocity Formulae</h2>
+            <h2>Velocidade</h2>
             <div class="formula">
                 <p><strong>Formula:</strong></p>
                 <p id="velocity-formula" class="formula-text">
@@ -71,17 +71,17 @@
                 <input type="number" id="R3-velocity" step="any">
             </div>
             <div class="form-group">
-                <label for="angle-velocity">Angle:</label>
+                <label for="angle-velocity">Angulo:</label>
                 <input type="number" id="angle-velocity" step="any">
             </div>
             <div class="form-group">
-                <label for="angle-units-velocity">Angle Units:</label>
+                <label for="angle-units-velocity">Unidade Angulo:</label>
                 <select id="angle-units-velocity">
-                    <option value="degrees">Degrees</option>
-                    <option value="radians">Radians</option>
+                    <option value="degrees">Graus</option>
+                    <option value="radians">Radianos</option>
                 </select>
             </div>
-            <button onclick="calculateVelocity()">Calculate V1</button>
+            <button onclick="calculateVelocity()">Calcular V1</button>
             <p id="velocity-result"></p>
         </div>
     </div>
