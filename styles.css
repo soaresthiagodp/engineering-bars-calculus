@@ -43,7 +43,8 @@ h2 {
     border: 1px solid #ddd;
     margin-bottom: 20px;
     position: relative;
-    overflow: hidden; /* Ensure no overflow */
+    overflow-x: auto; /* Permitir rolagem horizontal */
+    overflow-y: hidden; /* Ensure no overflow */
     text-align: center; /* Center the content */
 }
 
