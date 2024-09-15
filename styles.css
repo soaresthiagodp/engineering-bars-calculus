@@ -11,6 +11,13 @@ body {
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode body */
+body.dark-mode {
+    background-color: #181818;
+    color: #e0e0e0;
 }
 
 /* Container styling */
@@ -22,20 +29,36 @@ body {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark Mode container */
+body.dark-mode .container {
+    background-color: #242424;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 /* Heading styling */
-h1 {
+h1, h2 {
     text-align: center;
-    color: #007bff;
     margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+h1 {
+    color: #007bff;
 }
 
 h2 {
     color: #007bff;
-    margin-bottom: 10px;
 }
 
+/* Dark Mode heading */
+body.dark-mode h1, body.dark-mode h2 {
+    color: #1e90ff;
+}
+
+/* Formula block styling */
 .formula {
     background-color: #f8f9fa;
     padding: 20px;
@@ -43,17 +66,30 @@ h2 {
     border: 1px solid #ddd;
     margin-bottom: 20px;
     position: relative;
-    overflow-x: auto; /* Permitir rolagem horizontal */
-    overflow-y: hidden; /* Ensure no overflow */
-    text-align: center; /* Center the content */
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-align: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark Mode formula block */
+body.dark-mode .formula {
+    background-color: #2c2c2c;
+    border-color: #444;
 }
 
 .formula-text {
-    font-size: clamp(0.8rem, 4vw, 2rem); /* Responsive font size: min, preferred, max */
+    font-size: clamp(0.8rem, 4vw, 2rem);
     color: #555;
     line-height: 1.4;
     text-align: center;
-    width: 100%; /* Ensure it adapts to container width */
+    width: 100%;
+    transition: color 0.3s ease;
+}
+
+/* Dark Mode formula text */
+body.dark-mode .formula-text {
+    color: #ccc;
 }
 
 /* Form styling */
@@ -66,6 +102,13 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Dark Mode labels */
+body.dark-mode label {
+    color: #e0e0e0;
 }
 
 input, select {
@@ -75,11 +118,25 @@ input, select {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 input:focus, select:focus {
     border-color: #007bff;
     outline: none;
+}
+
+/* Dark Mode input and select */
+body.dark-mode input, body.dark-mode select {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+input:focus.dark-mode, select:focus.dark-mode {
+    border-color: #1e90ff;
 }
 
 /* Button styling */
@@ -91,10 +148,21 @@ button {
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
+    background-color: #0056b3;
+}
+
+/* Dark Mode button */
+body.dark-mode button {
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+}
+
+button.dark-mode:hover {
     background-color: #0056b3;
 }
 
@@ -103,4 +171,28 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
     color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Dark Mode results */
+body.dark-mode #radius-result, body.dark-mode #velocity-result, body.dark-mode #acceleration-result, 
+body.dark-mode #excentricradius-result, body.dark-mode #excentricvelocity-result, body.dark-mode #excentricacceleration-result {
+    color: #e0e0e0;
+}
+
+#dark-mode-toggle {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #333;
+    color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
