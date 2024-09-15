@@ -17,31 +17,35 @@
                 <option value="radius">Raio</option>
                 <option value="velocity">Velocidade</option>
                 <option value="acceleration">Aceleração</option>
+                <option value="excentricradius">Raio com Excentricidade</option>
+                <option value="excentricvelocity">Velocidade com Excentricidade</option>
+                <option value="excentricacceleration">Aceleração com Excentricidade</option>
             </select>
         </div>
 
+        <!-- Seção de Raio -->
         <div id="radius-formulae" class="formulae-section">
             <h2>Fórmula</h2>
             <div class="formula">
                 <p id="radius-formula" class="formula-text">
-                    \( R_1 = R_2 \cdot \cos(\theta) + \sqrt{R_3^2 - R_2^2 \cdot \sin^2(\theta)} \)
+                    \( R_1 = R_2 \cdot \cos(\theta_2) + \sqrt{R_3^2 - R_2^2 \cdot \sin^2(\theta_2)} \)
                 </p>
             </div>
             <div class="form-group">
-                <label for="R2">R2:</label>
-                <input type="number" id="R2" step="any">
+                <label for="R2-radius">R2:</label>
+                <input type="number" id="R2-radius" step="any">
             </div>
             <div class="form-group">
-                <label for="R3">R3:</label>
-                <input type="number" id="R3" step="any">
+                <label for="R3-radius">R3:</label>
+                <input type="number" id="R3-radius" step="any">
             </div>
             <div class="form-group">
-                <label for="angle">Ângulo:</label>
-                <input type="number" id="angle" step="any">
+                <label for="angle-radius">Ângulo:</label>
+                <input type="number" id="angle-radius" step="any">
             </div>
             <div class="form-group">
-                <label for="angle-units">Unidade Ângulo:</label>
-                <select id="angle-units">
+                <label for="angle-units-radius">Unidade Ângulo:</label>
+                <select id="angle-units-radius">
                     <option value="degrees">Graus</option>
                     <option value="radians">Radianos</option>
                 </select>
@@ -50,16 +54,17 @@
             <p id="radius-result"></p>
         </div>
 
+        <!-- Seção de Velocidade -->
         <div id="velocity-formulae" class="formulae-section">
             <h2>Formula</h2>
             <div class="formula">
                 <p id="velocity-formula" class="formula-text">
-                    \( V_1 = - W_2 \cdot R_2 \cdot \left[\sin(\theta) + \frac{R_2 \cdot \sin(\theta) \cdot \cos(\theta)}{\sqrt{R_3^2 - R_2^2 \cdot \sin^2(\theta)}}\right] \)
+                    \( V_1 = - W_2 \cdot R_2 \cdot \left[\sin(\theta_2) + \frac{R_2 \cdot \sin(\theta_2) \cdot \cos(\theta_2)}{\sqrt{R_3^2 - R_2^2 \cdot \sin^2(\theta_2)}}\right] \)
                 </p>
             </div>
             <div class="form-group">
-                <label for="W2">W2:</label>
-                <input type="number" id="W2" step="any">
+                <label for="W2-velocity">W2:</label>
+                <input type="number" id="W2-velocity" step="any">
             </div>
             <div class="form-group">
                 <label for="R2-velocity">R2:</label>
@@ -84,16 +89,17 @@
             <p id="velocity-result"></p>
         </div>
 
+        <!-- Seção de Aceleração -->
         <div id="acceleration-formulae" class="formulae-section">
             <h2>Fórmula</h2>
             <div class="formula">
                 <p id="acceleration-formula" class="formula-text">
-                    \( A_1 = - W_2 \cdot R_2 \cdot \cos(\theta) - \frac{W_2^2 \cdot R_2^2 \cdot \left[\cos^2(\theta) - \sin^2(\theta)\right]}{\sqrt{R_3^2 - R_2^2 \cdot \sin^2(\theta)}} - \frac{W_2^2 \cdot R_2^4 \cdot \cos^2(\theta) \cdot \sin^2(\theta)}{\left(R_3^2 - R_2^2 \cdot \sin^2(\theta)\right)^{3/2}} \)
+                    \( A_1 = - W_2 \cdot R_2 \cdot \cos(\theta_2) - \frac{W_2^2 \cdot R_2^2 \cdot \left[\cos^2(\theta_2) - \sin^2(\theta_2)\right]}{\sqrt{R_3^2 - R_2^2 \cdot \sin^2(\theta_2)}} - \frac{W_2^2 \cdot R_2^4 \cdot \cos^2(\theta_2) \cdot \sin^2(\theta_2)}{\left[R_3^2 - R_2^2 \cdot \sin^2(\theta_2)\right]^{3/2}} \)
                 </p>
             </div>
             <div class="form-group">
-                <label for="W2">W2:</label>
-                <input type="number" id="W2" step="any">
+                <label for="W2-acceleration">W2:</label>
+                <input type="number" id="W2-acceleration" step="any">
             </div>
             <div class="form-group">
                 <label for="R2-acceleration">R2:</label>
@@ -116,6 +122,119 @@
             </div>
             <button onclick="calculateAcceleration()">Calcular A1</button>
             <p id="acceleration-result"></p>
+        </div>
+
+        <!-- Seção de Raio com Excentricidade -->
+        <div id="excentricradius-formulae" class="formulae-section">
+            <h2>Fórmula</h2>
+            <div class="formula">
+                <p id="excentricradius-formula" class="formula-text">
+                    \( R_1 = R_2 \cdot \cos(\theta_2) + \sqrt{R_3^2 - [R_2^2 \cdot \sin(\theta_2) + e]^2} \)
+                </p>
+            </div>
+            <div class="form-group">
+                <label for="E-excentricradius">E:</label>
+                <input type="number" id="E-excentricradius" step="any">
+            </div>
+            <div class="form-group">
+                <label for="R2-excentricradius">R2:</label>
+                <input type="number" id="R2-excentricradius" step="any">
+            </div>
+            <div class="form-group">
+                <label for="R3-excentricradius">R3:</label>
+                <input type="number" id="R3-excentricradius" step="any">
+            </div>
+            <div class="form-group">
+                <label for="angle-excentricradius">Ângulo:</label>
+                <input type="number" id="angle-excentricradius" step="any">
+            </div>
+            <div class="form-group">
+                <label for="angle-units-excentricradius">Unidade Ângulo:</label>
+                <select id="angle-units-excentricradius">
+                    <option value="degrees">Graus</option>
+                    <option value="radians">Radianos</option>
+                </select>
+            </div>
+            <button onclick="calculateExcentricRadius()">Calcular R1</button>
+            <p id="excentricradius-result"></p>
+        </div>
+
+        <!-- Seção de Velocidade com Excentricidade -->
+        <div id="excentricvelocity-formulae" class="formulae-section">
+            <h2>Fórmula</h2>
+            <div class="formula">
+                <p id="excentricvelocity-formula" class="formula-text">
+                    \( V_1 = - W_2 \cdot R_2 \cdot \left[\sin(\theta_2) + \frac{R_2 \cdot \sin(\theta_2) \cdot \cos(\theta_2)}{\sqrt{R_3^2 -[R_2 \cdot \sin(\theta_2) + e]^2}}\right] \)
+                </p>
+            </div>
+            <div class="form-group">
+                <label for="E-excentricvelocity">E:</label>
+                <input type="number" id="E-excentricvelocity" step="any">
+            </div>
+            <div class="form-group">
+                <label for="W2-excentricvelocity">W2:</label>
+                <input type="number" id="W2-excentricvelocity" step="any">
+            </div>
+            <div class="form-group">
+                <label for="R2-excentricvelocity">R2:</label>
+                <input type="number" id="R2-excentricvelocity" step="any">
+            </div>
+            <div class="form-group">
+                <label for="R3-excentricvelocity">R3:</label>
+                <input type="number" id="R3-excentricvelocity" step="any">
+            </div>
+            <div class="form-group">
+                <label for="angle-excentricvelocity">Ângulo:</label>
+                <input type="number" id="angle-excentricvelocity" step="any">
+            </div>
+            <div class="form-group">
+                <label for="angle-units-excentricvelocity">Unidade Ângulo:</label>
+                <select id="angle-units-excentricvelocity">
+                    <option value="degrees">Graus</option>
+                    <option value="radians">Radianos</option>
+                </select>
+            </div>
+            <button onclick="calculateExcentricVelocity()">Calcular V1</button>
+            <p id="excentricvelocity-result"></p>
+        </div>
+    
+        <!-- Seção de Aceleração com Excentricidade -->
+        <div id="excentricacceleration-formulae" class="formulae-section">
+            <h2>Fórmula</h2>
+            <div class="formula">
+                <p id="excentricacceleration-formula" class="formula-text">
+                    \( A_1 = - W_2^2 \cdot R_2^2 \cdot \sin(\theta_2) - \frac{W_2^2 \cdot R_2^2 \cdot \left[\cos^2(\theta_2) - \sin^2(\theta_2)\right]}{\sqrt{R_3^2 - [R_2 \cdot \sin(\theta_2) + e]^2}} - \frac{W_2^2 \cdot R_2^4 \cdot \cos^2(\theta_2) \cdot \sin^2(\theta_2)}{\left[R_3^2 - (R_2 \cdot \sin(\theta_2) + e)^2\right]^{3/2}} \)
+                </p>
+            </div>
+            <div class="form-group">
+                <label for="E-excentricacceleration">E:</label>
+                <input type="number" id="E-excentricacceleration" step="any">
+            </div>
+            <div class="form-group">
+                <label for="W2-excentricacceleration">W2:</label>
+                <input type="number" id="W2-excentricacceleration" step="any">
+            </div>
+            <div class="form-group">
+                <label for="R2-excentricacceleration">R2:</label>
+                <input type="number" id="R2-excentricacceleration" step="any">
+            </div>
+            <div class="form-group">
+                <label for="R3-excentricacceleration">R3:</label>
+                <input type="number" id="R3-excentricacceleration" step="any">
+            </div>
+            <div class="form-group">
+                <label for="angle-excentricacceleration">Ângulo:</label>
+                <input type="number" id="angle-excentricacceleration" step="any">
+            </div>
+            <div class="form-group">
+                <label for="angle-units-excentricacceleration">Unidade Ângulo:</label>
+                <select id="angle-units-excentricacceleration">
+                    <option value="degrees">Graus</option>
+                    <option value="radians">Radianos</option>
+                </select>
+            </div>
+            <button onclick="calculateExcentricAcceleration()">Calcular A1</button>
+            <p id="excentricacceleration-result"></p>
         </div>
     </div>
 

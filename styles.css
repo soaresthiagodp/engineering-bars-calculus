@@ -99,7 +99,7 @@ button:hover {
 }
 
 /* Results styling */
-#radius-result, #velocity-result, #acceleration-result {
+#radius-result, #velocity-result, #acceleration-result, #excentricradius-result, #excentricvelocity-result, #excentricacceleration-result {
     font-size: 18px;
     font-weight: bold;
     color: #333;
