@@ -57,7 +57,7 @@ function calculateAcceleration() {
     }
 
     // Calculate A1
-    const A1 = -W2 * R2 * Math.cos(angleInRadians) -
+    const A1 = - (W2**2 * R2 * Math.cos(angleInRadians)) -
                (W2**2 * R2**2 * (Math.cos(angleInRadians)**2 - Math.sin(angleInRadians)**2)) /
                Math.sqrt(R3**2 - R2**2 * Math.sin(angleInRadians)**2) -
                (W2**2 * R2**4 * Math.cos(angleInRadians)**2 * Math.sin(angleInRadians)**2) /
