@@ -56,15 +56,21 @@ As formulas usadas nas aplicação são:
 
 ### Raio com Excentricidade
 
+```math
 \[ R_1 = R_2 \cdot \cos(\theta) + \sqrt{R_3^2 - (R_2^2 \cdot \sin(\theta) + e)^2} \]
+```
 
 ### Velocidade com Excentricidade
 
+```math
 \[ V_1 = - W_2 \cdot R_2 \cdot \left[\sin(\theta) + \frac{R_2 \cdot \sin(\theta) \cdot \cos(\theta)}{\sqrt{R_3^2 - (R_2 \cdot \sin(\theta) + e)^2}}\right] \]
+```
 
 ### Aceleração com Excentricidade
 
+```math
 \[ A_1 = - W_2 \cdot R_2 \cdot \cos(\theta) - \frac{W_2^2 \cdot R_2^2 \cdot \left[\cos^2(\theta) - \sin^2(\theta)\right]}{\sqrt{R_3^2 - (R_2 \cdot \sin(\theta) + e)^2}} - \frac{W_2^2 \cdot R_2^4 \cdot \cos^2(\theta) \cdot \sin^2(\theta)}{\left(R_3^2 - (R_2 \cdot \sin(\theta) + e)^2\right)^{3/2}} \]
+```
 
 ## Como Usar
 
